@@ -1,7 +1,15 @@
 const cds = require("@sap/cds");
 const MongoClient = require("mongodb").MongoClient;
 
-console.log(process.env);
+const cfenv = require('cfenv');
+const appEnv = cfenv.getAppEnv();
+
+// Get the credentials for a the mongo cluster service
+const credentials = appEnv.getServiceCreds('my-mongo-cluster');
+console.log(credentials);
+const uri = credentials.uri;
+
+console.log(credentials);
 
 /*const dotenv = require('dotenv');
 dotenv.config();

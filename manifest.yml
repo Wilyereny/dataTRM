@@ -20,3 +20,4 @@ applications:
   syslog_drain_url: null
   credentials:
     uri: mongodb://wilyerenylp:Wirquenis.9@ac-2zgtc5q-shard-00-00.ltwyp5c.mongodb.net:27017,ac-2zgtc5q-shard-00-01.ltwyp5c.mongodb.net:27017,ac-2zgtc5q-shard-00-02.ltwyp5c.mongodb.net:27017/?ssl=true&replicaSet=atlas-2wjb36-shard-0&authSource=admin&retryWrites=true&w=majority
+    
