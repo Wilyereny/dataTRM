@@ -1,0 +1,22 @@
+# Generated manifest.yml based on template version 0.1.0
+# appName = dataLake
+# language=nodejs
+# multitenancy=false
+---
+applications:
+# -----------------------------------------------------------------------------------
+# Backend Service
+# -----------------------------------------------------------------------------------
+- name: dataLake-srv
+  random-route: true  # for development only
+  path: gen/srv
+  memory: 256M
+  buildpack: nodejs_buildpack
+  services: 
+    - my-mongodb-cluster
+  # Declare a user-provided service for the MongoDB Atlas cluster
+- name: my-mongodb-cluster
+  instances: 1
+  syslog_drain_url: null
+  credentials:
+    uri: mongodb://wilyerenylp:Wirquenis.9@ac-2zgtc5q-shard-00-00.ltwyp5c.mongodb.net:27017,ac-2zgtc5q-shard-00-01.ltwyp5c.mongodb.net:27017,ac-2zgtc5q-shard-00-02.ltwyp5c.mongodb.net:27017/?ssl=true&replicaSet=atlas-2wjb36-shard-0&authSource=admin&retryWrites=true&w=majority
